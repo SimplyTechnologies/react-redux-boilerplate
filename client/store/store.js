@@ -19,10 +19,6 @@ function configure() {
 
   sagaMiddleware.run(Sagas);
 
-  if (module.hot) {
-    module.hot.accept();
-  }
-
   return store;
 }
 

@@ -27,18 +27,6 @@ $ npm install
 $ npm start
 ```
 
-## ESLint
-
-```
-$ npm run lint
-```
-
-## ESLint Fix
-
-```
-$ npm run lint:fix
-```
-
 ## Build
 
 ```
