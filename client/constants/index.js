@@ -1,2 +1,2 @@
 export { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from './filters';
-export { FETCH_POSTS, FETCH_POSTS_SUCCESS, FETCH_POSTS_FAILED } from './posts';
+export { FETCH_MESSAGE, FETCH_MESSAGE_SUCCESS, FETCH_MESSAGE_FAILED } from './posts';

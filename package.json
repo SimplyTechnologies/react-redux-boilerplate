@@ -5,7 +5,7 @@
   "description": "A boilerplate of things that shouldn't exist",
   "main": "client/index.js",
   "scripts": {
-    "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000",
+    "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 4200",
     "build": "webpack --progress --colors"
   },
   "license": "MIT",

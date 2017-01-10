@@ -1,7 +1,7 @@
 import {
-  FETCH_POSTS,
-  FETCH_POSTS_SUCCESS,
-  FETCH_POSTS_FAILED,
+  FETCH_MESSAGE,
+  FETCH_MESSAGE_SUCCESS,
+  FETCH_MESSAGE_FAILED,
 } from 'constants';
 import { PostsService } from 'services';
 import { takeEvery } from 'redux-saga';
@@ -9,16 +9,16 @@ import { call, put, fork } from 'redux-saga/effects';
 
 export function* fetchPosts() {
   try {
-    const posts = yield call(fetch, PostsService.all());
+    const posts = yield call(fetch, PostsService.getMessage());
     const toJson = yield posts.json();
-    yield put({ type: FETCH_POSTS_SUCCESS, payload: toJson });
+    yield put({ type: FETCH_MESSAGE_SUCCESS, payload: toJson });
   } catch (e) {
-    yield put({ type: FETCH_POSTS_FAILED, paload: e });
+    yield put({ type: FETCH_MESSAGE_FAILED, paload: e });
   }
 }
 
 function* fetchPostsWatcher() {
-  yield* takeEvery(FETCH_POSTS, fetchPosts);
+  yield* takeEvery(FETCH_MESSAGE, fetchPosts);
 }
 
 export function* postsSaga() {

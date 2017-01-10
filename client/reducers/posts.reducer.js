@@ -1,20 +1,20 @@
 import { handleActions } from 'redux-actions';
-import { FETCH_POSTS_SUCCESS, FETCH_POSTS_FAILED } from 'constants';
+import { FETCH_MESSAGE_SUCCESS, FETCH_MESSAGE_FAILED } from 'constants';
 
 export const postsInitialState = {
-  posts: [],
+  message: '',
   showError: false,
   errorMessage: 'Failed to load posts',
 };
 
 const handler = handleActions({
-  [FETCH_POSTS_SUCCESS](state, action) {
+  [FETCH_MESSAGE_SUCCESS](state, action) {
     return Object.assign({}, state, {
-      posts: action.payload,
+      message: action.payload,
       showError: false,
     });
   },
-  [FETCH_POSTS_FAILED](state) {
+  [FETCH_MESSAGE_FAILED](state) {
     return Object.assign({}, state, {
       showError: true,
     });

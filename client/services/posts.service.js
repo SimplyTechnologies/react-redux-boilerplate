@@ -1,8 +1,7 @@
-export const ROOT_URL = 'http://jsonplaceholder.typicode.com';
+export const ROOT_URL = 'http://localhost:4001/api';
 
 class Service {
-	byId = (id) => `http://jsonplaceholder.typicode.com/posts/${id}`
-  all = () => 'http://jsonplaceholder.typicode.com/posts'
+  getMessage = () => `${ROOT_URL}/users`
 };
 
 export const PostsService = new Service();

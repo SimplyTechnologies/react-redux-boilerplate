@@ -7,7 +7,6 @@ import styles from './styles.css';
 
 class Posts extends Component {
   static propTypes = {
-    posts: PropTypes.array.isRequired,
     showError: PropTypes.bool.isRequired,
     errorMessage: PropTypes.string.isRequired,
     fetchPosts: PropTypes.func.isRequired,
